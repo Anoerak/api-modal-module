@@ -19,18 +19,18 @@ const Modal = (props) => {
 	};
 
 	return (
-		<div className="modal__display" style={modalStyle.modal__display}>
-			<div className="modal__background">
+		<div className='modal__display' style={modalStyle.modal__display}>
+			<div className='modal__background'>
 				Modal
-				<div className="modal__container">
-					<div className="modal__header">
-						<h2 className="modal__title">
+				<div className='modal__container'>
+					<div className='modal__header'>
+						<h2 className='modal__title'>
 							{apiResponse.status === 200 || apiResponse.status === 201
 								? 'Congratulations'
 								: 'Something went wrong'}
 						</h2>
 						<button
-							className="modal__closeButton"
+							className='modal__closeButton'
 							onClick={() => {
 								handleClick();
 							}}
@@ -38,7 +38,7 @@ const Modal = (props) => {
 							X
 						</button>
 					</div>
-					<div className="modal__body">
+					<div className='modal__body'>
 						<p>{apiResponse.statusText}</p>
 					</div>
 				</div>
