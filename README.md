@@ -31,11 +31,13 @@ const App = () => {
 
 ## Props
 
+```bash
 | Prop Name        | Type   | Description                                        |
 | ---------------- | ------ | -------------------------------------------------- | ----------------------------------------------------------- |
 | apiResponse      | object | The response from the API call.                    | e.g.: { status: 418, statusText: "I'm a teapot", data: {} } |
 | modal\_\_display | object | The display property for the modal.                | e.g.: { display: 'flex'/'none' },                           |
 | redirectPath     | string | The path to redirect to after the modal is closed. | e.g.: '/'                                                   |
+```
 
 ## License
 
