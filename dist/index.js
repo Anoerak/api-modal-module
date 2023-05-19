@@ -84,8 +84,8 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
 	apiResponse: {
-		status: 800,
-		statusText: 'Default Message'
+		status: 408,
+		statusText: "I'm a teapot"
 	},
 	modal_display: {
 		display: 'none'

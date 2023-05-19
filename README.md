@@ -1,5 +1,9 @@
 # api-modal-for-react
 
+> A modal component for displaying API responses in React. This package is part of the OpenClassrooms' Front-End Developer path. It is not meant to be used outside of this context. Once the path is completed, and the project validated, this package won't be maintained.
+
+[![NPM](https://img.shields.io/npm/v/api-modal-for-react.svg)](https://www.npmjs.com/package/api-modal-for-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ## Install
 
 ```bash
