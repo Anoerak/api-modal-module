@@ -19,56 +19,62 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Modal = function Modal(props) {
 	var navigate = (0, _reactRouter.useNavigate)();
 
+	// We store the props in variables
 	var apiResponse = props.apiResponse,
 	    modal__display = props.modal__display,
 	    redirectPath = props.redirectPath;
 
+	// We can use the variables to style the modal
 
 	var modalStyle = {
 		modal__display: modal__display,
 		redirectPath: redirectPath
 	};
 
+	// We handle the click event to redirect the user to the path
 	var handleClick = function handleClick() {
 		navigate(redirectPath);
 	};
 
-	return _react2.default.createElement(
-		'div',
-		{ className: 'modal__display', style: modalStyle.modal__display },
+	return (
+		// We use the variables to style the modal
 		_react2.default.createElement(
 			'div',
-			{ className: 'modal__background' },
-			'Modal',
+			{ className: 'modal__display', style: modalStyle.modal__display },
 			_react2.default.createElement(
 				'div',
-				{ className: 'modal__container' },
+				{ className: 'modal__background' },
+				'Modal',
 				_react2.default.createElement(
 					'div',
-					{ className: 'modal__header' },
+					{ className: 'modal__container' },
 					_react2.default.createElement(
-						'h2',
-						{ className: 'modal__title' },
-						apiResponse.status === 200 || apiResponse.status === 201 ? 'Congratulations' : 'Something went wrong'
+						'div',
+						{ className: 'modal__header' },
+						_react2.default.createElement(
+							'h2',
+							{ className: 'modal__title' },
+							apiResponse.status === 200 || apiResponse.status === 201 ? 'Congratulations' : 'Something went wrong'
+						),
+						_react2.default.createElement(
+							'button',
+							{
+								className: 'modal__closeButton',
+								onClick: function onClick() {
+									handleClick();
+								}
+							},
+							'X'
+						)
 					),
 					_react2.default.createElement(
-						'button',
-						{
-							className: 'modal__closeButton',
-							onClick: function onClick() {
-								handleClick();
-							}
-						},
-						'X'
-					)
-				),
-				_react2.default.createElement(
-					'div',
-					{ className: 'modal__body' },
-					_react2.default.createElement(
-						'p',
-						null,
-						apiResponse.statusText
+						'div',
+						{ className: 'modal__body' },
+						_react2.default.createElement(
+							'p',
+							null,
+							apiResponse.statusText
+						)
 					)
 				)
 			)
